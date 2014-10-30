@@ -1,0 +1,11 @@
+.img-brand{
+  position:fixed !important;
+  top: 3px !important;
+  left: 3px !important;
+}
+
+.navbar {
+    height: 60px;
+    display: block;
+    position: fixed;
+}

@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "MD5": {
+      "version": "1.2.1",
+      "dependencies": {
+        "charenc": {
+          "version": "0.0.1"
+        },
+        "crypt": {
+          "version": "0.0.1"
+        }
+      }
+    },
+    "mime": {
+      "version": "1.2.11"
+    }
+  }
+}

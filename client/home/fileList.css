@@ -1,0 +1,30 @@
+.fileUpload {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  top:-10px;
+}
+.fileUpload input.upload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.selected-filename{
+  margin-right:10px;
+  margin-top: 6px;
+}
+
+.thumbnail{
+  width: 250px;
+  height: auto;
+}
+
+td{
+  vertical-align: middle !important;
+}

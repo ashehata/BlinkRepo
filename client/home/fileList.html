@@ -1,0 +1,48 @@
+<template name="fileList">
+  <div class="container">
+    <span type="submit" class="btn btn-md btn-success upload-btn pull-right">Upload File</span>
+    <div type="file" class="fileUpload btn btn-primary pull-right">
+      <span>Select File</span>
+      <input type="file" class=" fileselect upload" />
+    </div>
+    <span type="submit" class="btn btn-default download-selected btn-md pull-left">Download Selected Files</span>
+
+    <span class="selected-filename pull-right">{{selectedFilename}}</span>
+    <table class="table">
+      <thead>
+        <tr>
+          <th id="filename">File Name</th>
+          <th id="type">Type</th>
+          <th id="timestamp">Date Uploaded</th>
+          <th id="size">Size</th>
+        </tr>
+      </thead>
+      <tbody>
+      {{#each file}}
+        {{>singleFile}}
+      {{/each}}
+      </tbody>
+    </table>
+  </div>
+</template>
+
+<template name="singleFile">
+  <tr>
+    <td>
+        <label>
+          <input type="checkbox" class="download" value="{{filename}}">
+        </label>
+      <a href='files/download/{{filename}}' class="btn btn-lg glyphicon glyphicon-download download"></a>&nbsp;{{filename}}
+    </td>
+    <td>{{type}}</td>
+    <td>{{timestamp}}</td>
+    <td>{{size}} MB</td>
+  </tr>
+  <tr>
+  <td colspan='10' class='file-details' style="display:none">
+    <div>
+    <img class="thumbnail" src="/files/{{filename}}"/>  
+    </div>
+  </td>
+  </tr>
+</template>
