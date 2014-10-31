@@ -2,7 +2,8 @@ Session.setDefault('sortBy', {timestamp:-1})
 Session.setDefault('sortOrder', -1)
 Template.fileList.events({
   'click .upload-btn' : function(e,tmpl){
-    file = tmpl.find(".fileselect").files[0]
+    file = tmpl.find(".fileselect").files[0];
+    //iOS will upload images with the same name. TODO: Add option to rename uploaded file.
     if (Files.findOne({filename: file.name})){
       bootbox.confirm("File already exists. Overwrite existing file?", function(result){
         if (result)
